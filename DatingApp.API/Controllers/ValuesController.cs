@@ -22,6 +22,7 @@ namespace DatingApp.API.Controllers
             _context = context;
         }
 
+        [AllowAnonymous]
         [HttpGet]
         // IActionResult allows http responses
         // ASYNC = good (Use as much as possible)
@@ -32,6 +33,7 @@ namespace DatingApp.API.Controllers
             return Ok(values);
         }
 
+        [AllowAnonymous]
         // Root param
         [HttpGet("{id}")]
         public async Task<IActionResult> GetValue(int id)
