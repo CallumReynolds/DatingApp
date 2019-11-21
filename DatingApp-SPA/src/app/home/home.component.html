@@ -11,10 +11,11 @@
     <div *ngIf="registerMode" class="container">
       <div class="row justify-content-center">
         <div class="col-4">
-          <app-register></app-register>
+          <!-- This is how you pass values down to a child component -->
+          <app-register (cancelRegister)="cancelRegisterMode($event)"></app-register>
         </div>
       </div>
     </div>
   </div>
 
-  <p *ngFor="let value of values">{{value.name}}</p>
+  <!-- <p *ngFor="let value of values">{{value.name}}</p> -->
